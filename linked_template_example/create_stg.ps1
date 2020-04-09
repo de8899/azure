@@ -5,7 +5,7 @@ $resourceGroupName = $projectName + "rg"
 $storageAccountName = $projectName + "store"
 $containerName = "templates" # The name of the Blob container to be created.
 
-$linkedTemplateURL = "https://raw.githubusercontent.com/Azure/azure-docs-json-samples/master/get-started-deployment/linked-template/linkedStorageAccount.json" # A completed linked template used in this tutorial.
+$linkedTemplateURL = "https://raw.githubusercontent.com/de8899/azure/master/linked_template_example/linkedstorageaccount.json" # A completed linked template used in this tutorial from de8899
 $fileName = "linkedStorageAccount.json" # A file name used for downloading and uploading the linked template.
 
 # Download the template
