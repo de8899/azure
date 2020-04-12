@@ -6,10 +6,10 @@
             "value": "eastus"
         },
         "networkInterfaceName": {
-            "value": "basicvm3"
+            "value": "nic002"
         },
         "networkSecurityGroupName": {
-            "value": "basicvm1-nsg"
+            "value": "nsg1"
         },
         "networkSecurityGroupRules": {
             "value": [
@@ -32,7 +32,7 @@
             "value": "default"
         },
         "virtualNetworkName": {
-            "value": "armtesting1-vnet"
+            "value": "vnet1"
         },
         "addressPrefixes": {
             "value": [
@@ -50,7 +50,7 @@
             ]
         },
         "publicIpAddressName": {
-            "value": "basicvm3-ip"
+            "value": "ip-2"
         },
         "publicIpAddressType": {
             "value": "Dynamic"
@@ -59,10 +59,10 @@
             "value": "Basic"
         },
         "virtualMachineName": {
-            "value": "basicvm3"
+            "value": "w002"
         },
         "virtualMachineRG": {
-            "value": "armtesting1"
+            "value": "armtestRG"
         },
         "osDiskType": {
             "value": "Standard_LRS"
@@ -77,10 +77,10 @@
             "value": null
         },
         "diagnosticsStorageAccountName": {
-            "value": "armtesting1diag"
+            "value": "rg1diag283a"
         },
         "diagnosticsStorageAccountId": {
-            "value": "Microsoft.Storage/storageAccounts/armtesting1diag"
+            "value": "Microsoft.Storage/storageAccounts/rg1diag283a"
         },
         "diagnosticsStorageAccountType": {
             "value": "Standard_LRS"
