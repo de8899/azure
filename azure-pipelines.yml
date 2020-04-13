@@ -5,7 +5,7 @@
 
 trigger:
 - master
-- task: AzureResourceManagerTemplateDeployment@3
+- task: AzureResourceManagerTemplateDeployment@344
   inputs:
     deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'pline-conn'
