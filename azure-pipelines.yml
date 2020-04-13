@@ -8,6 +8,7 @@ trigger:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'pline-conn'
     subscriptionId: '39871908-78ed-4ef9-adbf-cb5c701334e3'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'RG1'
@@ -16,7 +17,4 @@ trigger:
     csmFileLink: 'https://raw.githubusercontent.com/de8899/azure/master/w001template.json'
     csmParametersFileLink: 'https://raw.githubusercontent.com/de8899/azure/master/parameters.json'
     deploymentMode: 'Incremental'
-    deploymentName: 'deploy 1 vm'
 steps:
-- script: .\deploy.ps1
-  displayName: 'build'
