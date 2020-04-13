@@ -6,6 +6,6 @@ steps:
 - task: AzurePowerShell@3
   inputs:
     azureSubscription: 'demo-deploy-sp'
-    ScriptPath: 'AzureResourceGroupDemo/Deploy-AzureResourceGroup.ps1'
-    ScriptArguments: -ResourceGroupName 'demogroup' -ResourceGroupLocation 'centralus'
+    ScriptPath: 'https://raw.githubusercontent.com/de8899/azure/master/deploy.ps1'
+    ScriptArguments: -ResourceGroupName 'RG1' -ResourceGroupLocation 'centralus'
     azurePowerShellVersion: LatestVersion
