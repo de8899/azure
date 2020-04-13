@@ -1,11 +1,8 @@
-pool:
-  name: Hosted Windows 2019 with VS2019
-  demands: azureps
-
-steps:
-- task: AzurePowerShell@3
+- task: AzurePowerShell@5
   inputs:
-    azureSubscription: 'demo-deploy-sp'
-    ScriptPath: 'https://raw.githubusercontent.com/de8899/azure/master/deploy.ps1'
-    ScriptArguments: -ResourceGroupName 'RG1' -ResourceGroupLocation 'centralus'
-    azurePowerShellVersion: LatestVersion
+    azureSubscription: 'Azure subscription 1(1)(39871908-78ed-4ef9-adbf-cb5c701334e3)'
+    ScriptType: 'FilePath'
+    ScriptPath: '''https://raw.githubusercontent.com/de8899/azure/master/deploy.ps1'''
+    errorActionPreference: 'silentlyContinue'
+    azurePowerShellVersion: 'LatestVersion'
+    pwsh: true
