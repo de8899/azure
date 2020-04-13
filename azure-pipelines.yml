@@ -1,20 +1,11 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+pool:
+  name: Hosted Windows 2019 with VS2019
+  demands: azureps
 
-trigger:
-- master
-- task: AzureResourceManagerTemplateDeployment@344
-  inputs:
-    deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'pline-conn'
-    subscriptionId: '39871908-78ed-4ef9-adbf-cb5c701334e3'
-    action: 'Create Or Update Resource Group'
-    resourceGroupName: 'RG1'
-    location: 'East US'
-    templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/de8899/azure/master/w001template.json'
-    csmParametersFileLink: 'https://raw.githubusercontent.com/de8899/azure/master/parameters.json'
-    deploymentMode: 'Incremental'
 steps:
+- task: AzurePowerShell@3
+  inputs:
+    azureSubscription: 'demo-deploy-sp'
+    ScriptPath: 'AzureResourceGroupDemo/Deploy-AzureResourceGroup.ps1'
+    ScriptArguments: -ResourceGroupName 'demogroup' -ResourceGroupLocation 'centralus'
+    azurePowerShellVersion: LatestVersion
